@@ -61,6 +61,8 @@ compute_capabilities.add((7, 0))
 _, bare_metal_major, _ = get_cuda_bare_metal_version(CUDA_HOME)
 if int(bare_metal_major) >= 11:
     compute_capabilities.add((8, 0))
+if int(bare_metal_major) >= 12:
+    compute_capabilities.add((9, 0))
 
 compute_capability, _ = get_nvidia_cc()
 if compute_capability is not None:
